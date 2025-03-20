@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Blue Themed Website</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: #1a1a2e;
+            /* Dark blue background */
+            color: #ffffff;
+            /* White text */
+        }
+
+        h6 {
+            page-break-after: avoid;
+        }
+
+        .menu {
+            width: 250px;
+            background-color: #162447;
+            /* Darker blue for menu */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu a {
+            color: #ffffff;
+            /* White text for links */
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+        }
+
+        .menu a:hover {
+            background-color: #1f4068;
+            /* Lighter blue on hover */
+            padding-left: 10px;
+            /* Indent on hover */
+        }
+
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e94560;
+            /* Accent color for headings */
+        }
+    </style>
+
+    <style>
+        @media print {
+            body {
+                font-size: 12pt;
+                color: #000000;
+                background-color: #ffffff;
+            }
+
+            .menu {
+                display: none;
+                /* Hide the menu in print */
+            }
+
+            .main {
+                margin: 0;
+                padding: 0;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #000000;
+                /* Ensure all headings are black */
+            }
+
+            a {
+                text-decoration: underline;
+                /* Underline links */
+                color: #0000EE;
+                /* Standard link color in print */
+            }
+
+            a[href]:after {
+                content: " (" attr(href) ")";
+                /* Show URLs in print */
+            }
+        }
+
+        a[href]::after {
+            content: " <" attr(href) ">";
+            color: #888;
+            background-color: inherit;
+            font-style: italic;
+            size: 80%;
+        }
+
+
+        p {
+            orphans: 2;
+            widows: 2;
+        }
+
+        @media print {
+            body {
+                margin: 2cm;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#feldgeräte">Feldgeräte</a></li>
+            <li><a href="#schaltschrank">Schaltschrank</a></li>
+            <li><a href="#fazit">Fazit</a></li>
+            <li>
+                <a href="#folgende-einzelne-änderungen-gemäß-seitenzahl-im-schaltplan">Folgende einzelne Änderungen
+                    gemäß Seitenzahl im Schaltplan</a>
+                <ul>
+                    <li><a href="#seite-3">Seite 3</a></li>
+                    <li><a href="#seite-4">Seite 4</a></li>
+                    <li><a href="#seite-5">Seite 5</a></li>
+                    <li><a href="#seite-7">Seite 7</a></li>
+                    <li><a href="#seite-8">Seite 8</a></li>
+                    <li><a href="#seite-9">Seite 9</a></li>
+                    <li><a href="#seite-12">Seite 12</a></li>
+                    <li><a href="#seite-13">Seite 13</a></li>
+                    <li><a href="#seite-14">Seite 14</a></li>
+                    <li><a href="#seite-15">Seite 15</a></li>
+                    <li><a href="#seite-16">Seite 16</a></li>
+                    <li><a href="#seite-17">Seite 17</a></li>
+                    <li><a href="#seite-19">Seite 19</a></li>
+                    <li><a href="#seite-22">Seite 22</a></li>
+                    <li><a href="#seite-24">Seite 24</a></li>
+                    <li><a href="#seite-25">Seite 25</a></li>
+                    <li><a href="#seite-28">Seite 28</a></li>
+                    <li><a href="#seite-31">Seite 31</a></li>
+                    <li><a href="#seite-33">Seite 33</a></li>
+                    <li><a href="#seite-34">Seite 34</a></li>
+                    <li><a href="#seite-35">Seite 35</a></li>
+                    <li><a href="#seite-45">Seite 45</a></li>
+                    <li><a href="#seite-52">Seite 52</a></li>
+                    <li><a href="#seite-53">Seite 53</a></li>
+                    <li><a href="#seite-54">Seite 54</a></li>
+                    <li><a href="#seite-55">Seite 55</a></li>
+                    <li><a href="#seite-59">Seite 59</a></li>
+                    <li><a href="#seite-62">Seite 62</a></li>
+                    <li><a href="#seite-65">Seite 65</a></li>
+                    <li><a href="#seite-66">Seite 66</a></li>
+                    <li><a href="#seite-69">Seite 69</a></li>
+                    <li><a href="#seite-73">Seite 73</a></li>
+                    <li><a href="#seite-74">Seite 74</a></li>
+                    <li><a href="#seite-75">Seite 75</a></li>
+                    <li><a href="#seite-80">Seite 80</a></li>
+                    <li><a href="#seite-100">Seite 100</a></li>
+                    <li><a href="#seite-105">Seite 105</a></li>
+                    <li><a href="#seite-106">Seite 106</a></li>
+                    <li><a href="#seite-108">Seite 108</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main">
+        <h3 id="feldgeraete">Feldgeräte</h3>
+        <ul>
+            <li>Es wurde Volumenstromregler gefunden, die noch nicht angeschlossen sind.</li>
+            <li>Kabelsuche und Klemmenarbeiten durchgeführt</li>
+            <li>Zugang durch Mieternutzung meist verhindert</li>
+            <li>fehlende Revisionsöffnung im Meetingraum <a href="#Zwischendecke">Zwischendecke</a></li>
+            <li>fehlende Dokumentation erarbeitet</li>
+        </ul>
+
+        <h3 id="schaltschrank">Schaltschrank</h3>
+        <ul>
+            <li>Schaltschrank Bodenblech entfernt und überschüssige Kabel entfernt</li>
+            <li>falsch verlegte Kabel korrigiert</li>
+            <li>Verlegeart im Brüstungskanal massiv angepasst.</li>
+        </ul>
+
+        <h3 id="unterflur-verkabelung">Unterflur-Verkabelung</h3>
+        <ul>
+            <li>die Verkabelung im Zwischenboden des Schaltschrankes wurden eingekürzt und</li>
+            <li>mit der Zugentlastung ordentlich verlegt</li>
+            <li>Reserve-Kabel auf Dose Staubdicht verschlossen</li>
+            <li>gekreuzte Adern wurden kontrolliert entfernt</li>
+        </ul>
+
+        <h2 id="Fazit">Fazit:</h2>
+        <p>Bei Begin der IBN sind grafierende Mängel aufgedrehten, welche zuerst behobern werden mussten.
+            Sicherheitschaltung und grundlegende Funktionen waren wegen falscher, Fehlerhafter und stümperhafter
+            Schaltschrank verdrahtung aufgedrehten</p>
+        <ul>
+            <li>Mängel wie nicht verpresste Aderendhülsen erschwerten die Fehlersuche</li>
+            <li>Ausbau von nicht mehr verwendeten Klemmen und Kabeln sind auch hier ein Zeitlicher Aspekt</li>
+        </ul>
+
+
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h2>Folgende einzelne Änderungen gemäß Seitenzahl im Schaltplan</h2>
+
+        <h3 id="seite-3">Seite 3</h3>
+        <ul>
+            <li>Kontrolle der Freigabe-Schaltung.</li>
+        </ul>
+
+        <h3 id="seite-4">Seite 4</h3>
+        <ul>
+            <li>Beim Testen wurde festgestellt das 7 Verbindungsleitungen nicht bzw. falsch verdrahtet wurden</li>
+            <li>Fehlersuche und Software sowie Hardewaretests sind bindend erforderlich gewesen</li>
+            <li>Korrektur und Neuverdrahtung inklusive Testlauf erfolgreich.</li>
+        </ul>
+
+        <h3 id="seite-5">Seite 5</h3>
+        <ul>
+            <li>Die Rückmeldung der 3 Phasenüberwachung hat keine Auswirkung auf die Sicherheitsabschaltung.</li>
+            <li>Keine Funktion bei der Überprüfung festgestellt, dass der Nullleiter falsch eingeklemmt war.</li>
+            <li>Dieser wurde von der Störmelde-Lampe gezogen, was dadurch nicht funktionierte.</li>
+            <li>Aber wurden neu verdrahtet und die Erdfarben richtig zugeordnet.</li>
+        </ul>
+
+        <h3 id="seite-7">Seite 7</h3>
+        <ul>
+            <li>Der BMA Kontakt ohne Funktion, der Nulleiter wurde von der sekundärseite der Störmeldelampe angeklemmt,
+                da das totaler schwachsinn ist wurde auch hier die Verdrahtung neu erstellt.</li>
+            <li>Diese Mange wurde ebenfalls korrigiert und auf Funktion getestet.</li>
+        </ul>
+
+        <h3 id="seite-8">Seite 8</h3>
+        <ul>
+            <li>Die Freigabe der Pumpe für die Heizung wurde überprüft und im Schaltplan revidiert.</li>
+        </ul>
+
+        <h3 id="seite-9">Seite 9</h3>
+        <ul>
+            <li>Ebenfalls wurde die Freigabe für die Kältepumpe kontrolliert und im Schaltplan revidiert.</li>
+        </ul>
+
+        <h3 id="seite-12">Seite 12</h3>
+        <ul>
+            <li>Kontakt der Störmeldung an Klemme geprüft.</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h3 id="seite-13">Seite 13</h3>
+        <ul>
+            <li>Revision der Zeichnung von der Abluftklappe, da diese entfallen ist.</li>
+        </ul>
+
+        <h3 id="seite-14">Seite 14</h3>
+        <ul>Abluftklappe.
+            <li>Die MP-Bus Adressen 7 und 8 wurden verteilt.</li>
+        </ul>
+
+        <h3 id="seite-16">Seite 16</h3>
+        <ul>
+            <li>Schaltplanrevision Abluftklappe.</li>
+        </ul>
+
+        <h3 id="seite-17">Seite 17</h3>
+        <ul>
+            <li>Schaltplanrevision BMA Kontakt</li>
+        </ul>
+
+        <h3 id="seite-19">Seite 19</h3>
+        <ul>
+            <li>Volumenstromregler mit zwei Positionen.</li>
+            <li>Bei der Inbetriebnahme wurde festgestellt, dass interne Verdrahtung fehlerhaft und fehlend war.</li>
+            <li>Es war zum einen der Nullleiter nicht geklemmt und zum anderen die 24 V nicht verdrahtet.</li>
+            <li>Deswegen waren die Schallschütze 18 KF1 und 18 KF2 ohne Funktion.</li>
+            <li>Diese wurden am 5. März korrigiert, eingeklemmt und repariert.</li>
+            <li>Zusätzlich Schaltplanrevision.</li>
+            <li>Nachdem zusätzliche Volumenstromregler auf den Schaltschrank 5.1 aufgeschaltet werden müssen, wurden die
+                freien Klemmen der Seite 19 verwendet:</li>
+            <ul>
+                <li>Umbau auf L2 24VDC und MP-Bus erforderlich</li>
+                <li>Schaltplan wurde ein neues Blatt erstellt und eingeheftet</li>
+            </ul>
+        </ul>
+
+        <h3 id="seite-22">Seite 22</h3>
+        <ul>
+            <li>Schaltplanrevision und zusätzlich ein Raumbediengerät hinzugefügt mit der ModBusadresse 7.</li>
+        </ul>
+
+        <h3 id="seite-24">Seite 24</h3>
+        <ul>
+            <li>Schaltplanrevision.</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h3 id="seite-25">Seite 25</h3>
+        <ul>
+            <li>SME beziehungsweise Jalousiensteuerung überprüft.</li>
+            <li>Zwölf Antriebe gefunden und Testlauf erfolgreich.</li>
+        </ul>
+
+        <h3 id="seite-28">Seite 28</h3>
+        <ul>
+            <li>MP minus Linie der Bedienung Stellantriebe überprüft.</li>
+            <li>Adressen 1-3 vorhanden.</li>
+            <li>Schreibt dann Revision und zusätzlich Umbau auf MP Bus Linie 1 der Volumenstrom André Adresse 78.</li>
+        </ul>
+
+        <h3 id="seite-31">Seite 31</h3>
+        <ul>
+            <li>Schaltplanrevision, da eine XMP Linie zugefügt wurde.</li>
+            <li>Mit 6 Adressen.</li>
+            <li>Klemmbezeichnung steht noch offen.</li>
+        </ul>
+
+        <h3 id="seite-33">Seite 33</h3>
+        <ul>
+            <li>Überprüfung der Unterfuhr-Vektoren mit manueller Spannungsvorgabe erfolgreich.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-34">Seite 34</h3>
+        <ul>
+            <li>1 zu 1 Test der Unterfuhr-Konvektion, auch hier wieder mit manueller Vollwertvorgabe und
+                Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-35">Seite 35</h3>
+        <ul>
+            <li>Unterfuhr-Vektor mit manueller Ansteuerung in Ordnung.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-45">Seite 45</h3>
+        <ul>
+            <li>interne Schaltschrank verdrahtung mangelhaft</li>
+            <li>Korrektur und Testlauf erfolgreich</li>
+            <li>Schaltplanrevision und Dokumentation</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h3 id="seite-47">Seite 47</h3>
+        <ul>
+            <li>interne Schaltschrank Verdrahtung kontrolliert</li>
+            <li>Korrektur und Testlauf erfolgreich</li>
+            <li>Schaltplanrevision und Dokumentation</li>
+        </ul>
+
+        <h3 id="seite-52">Seite 52</h3>
+        <ul>
+            <li>Schaltplanrevision der Zuluftklappe.</li>
+        </ul>
+
+        <h3 id="seite-53">Seite 53</h3>
+        <ul>
+            <li>Abluftklappe und daher Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-54">Seite 54</h3>
+        <ul>
+            <li>Auch hier wieder kein Kanal- und Drucksensor der Zuluft.</li>
+            <li>Auch hier wurde kein Drucksensor verbaut und soll auch nicht verbaut werden.</li>
+            <li>Absprache mit der Bauleitung: Umbau auf MPB Bus reicht aus.</li>
+            <li>Da zusätzlich ein Volumenstromregler "Finance Area" aufgeschaltet werden muss
+                <ul>
+                    <li>wurde hier auf X5 Klemmen nachgesetzt und auf Seite 54 revidiert</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3 id="seite-55">Seite 55</h3>
+        <ul>
+            <li>Umbau der Volumenstromregler 300 × 400 auf MP Bus Linie Adresse 7 und 8.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-59">Seite 59</h3>
+        <ul>
+            <li>Volumenstromregler mit zwei Positionen wurden überprüft.</li>
+            <li>Der Auf- und Zu-Befehl im Schaltschrank funktionierte nur sporadisch.</li>
+            <li>Hier wurde festgestellt, dass das zuständige Relais einen Wackelkontakt hatte, da die Verteilerbrücken
+                nicht richtig gesetzt wurden.
+                <ul>
+                    <li>-> Problem behoben.</li>
+                </ul>
+            </li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h3 id="seite-62">Seite 62</h3>
+        <ul>
+            <li>Die Luftqualitäts-Sensorik wurden auf Com-Port 1 gesetzt.</li>
+            <li>neue Klemmen bzw neuer Com-Port-Stecker installiert.</li>
+            <li>Beschriftung wieder instand gesetzt.</li>
+            <li>Schaltplan-Revision.</li>
+        </ul>
+
+        <h3 id="seite-65">Seite 65</h3>
+        <ul>
+            <li>Die Jalousie beziehungsweise SMI-Steuerung wurden überprüft.</li>
+            <li>Es wurden zwölf Antriebe auf Linie 1 gefunden.</li>
+        </ul>
+
+        <h3 id="seite-66">Seite 66</h3>
+        <ul>
+            <li>Es wurden weitere Jalousien überprüft.</li>
+            <li>6 Antriebe gefunden.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-69">Seite 69</h3>
+        <ul>
+            <li>Hier wurde die MP Buslinie der Volumenstromregler auf Controller 2 - Linie 2 angeklemmt, inklusive
+                Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-73">Seite 73</h3>
+        <ul>
+            <li>Manuelle Ansteuerung der Unterflurkonvektoren im Eingangsbereich erfolgreich.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-74">Seite 74</h3>
+        <ul>
+            <li>Ebenfalls manuelle Ansteuerung der Unterflurkonvektoren erfolgreich.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+
+        <h3 id="seite-75">Seite 75</h3>
+        <ul>
+            <li>Manuelle Ansteuerung der Unterflurkonvektoren in dem Meetingraum "Appendix West" erfolgreich.</li>
+            <li>Schaltplanrevision.</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+        <h3 id="seite-80">Seite 80</h3>
+        <ul>
+            <li>Überprüfung der Zuleitung für Touch-Panel erfolgreich.</li>
+        </ul>
+
+        <h3 id="seite-100">Seite 100</h3>
+        <ul>
+            <li>Schaltplanrevision und</li>
+            <li>Definition Com-Port 1 für die Raumbediengeräte.</li>
+        </ul>
+
+        <h3 id="seite-105">Seite 105</h3>
+        <ul>
+            <li>Schaltplanrevision und</li>
+            <li>Hinzufügen einer SMI Mastercard inklusive Schaltschrankverdrahtung.</li>
+        </ul>
+
+        <h3 id="seite-106">Seite 106</h3>
+        <ul>
+            <li>MP-Bus Linie hinzugefügt und neu verdrahtet</li>
+            <li>SChaltplan-Revision</li>
+            <li>dokumentation</li>
+            <li></li>
+        </ul>
+
+        <h3 id="seite-108">Seite 108</h3>
+        <ul>
+            <li>Korrektur der falschen Eintragungen</li>
+            <li>Dokumentation</li>
+        </ul>
+
+        <h3 id="seite-114">Seite 114</h3>
+        <ul>
+            <li>SMI-Master Karte hinzugefügt</li>
+            <li>Verdrahtet</li>
+            <li>Schaltplan-Revision</li>
+            <li>Dokumentation</li>
+            <li>Testlauf der Jalousie erfolgreich</li>
+        </ul>
+        <h6>- - - - - - - - - - - - - - - - - - </h6>
+    </div>
+</body>
+
+</html>
