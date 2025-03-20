@@ -21,24 +21,58 @@
         padding: 0;
     }
 
-    h1, h2, h3, h4, h5, h6 {
-        color: #000000; /* Ensure all headings are black */
-        
-    }
+    @media print {
+        body {
+            font-family: 'Georgia', serif; /* Serif font for readability */
+            font-size: 12pt; /* Base font size */
+            color: #000000; /* Black text color */
+            background-color: #FFFFFF; /* White background */
+            line-height: 1.5; /* Improved line height for readability */
+            margin: 0; /* Remove default margin */
+        }
+    
+        h1 {
+            font-size: 15pt; /* Larger font size for main title */
+            font-weight: bold; /* Bold for emphasis */
+            color: #000000; /* Black color for headings */
+            margin-bottom: 0.5em; /* Space below the title */
+        }
+    
+        h2 {
+            font-size: 11pt; /* Subheading size */
+            font-weight: bold; /* Bold for emphasis */
+            color: #000000; /* Black color for subheadings */
+            margin-bottom: 0.4em; /* Space below subheadings */
+        }
 
-    h1 {
-        font-size: 18pt; /* Larger font size for main title */
-        margin-bottom: 0.5em; /* Space below the title */
-    }
-
-    h2 {
-        font-size: 16pt; /* Subheading size */
-        margin-bottom: 0.4em; /* Space below subheadings */
-    }
-
-    h3 {
-        font-size: 14pt; /* Smaller subheading size */
-        margin-bottom: 0.3em; /* Space below */
+        h3 {
+            font-size: 9pt; /* Larger font size for main title */
+            font-weight: bold; /* Bold for emphasis */
+            color: #000000; /* Black color for headings */
+            margin-bottom: 0.5em; /* Space below the title */
+        }
+    
+        h4 {
+            font-size: 7pt; /* Subheading size */
+            font-weight: bold; /* Bold for emphasis */
+            color: #000000; /* Black color for subheadings */
+            margin-bottom: 0.4em; /* Space below subheadings */
+        }
+    
+        a {
+            text-decoration: underline; /* Underline links */
+            color: #0000EE; /* Standard link color */
+        }
+    
+        a[href]:after {
+            content: " (" attr(href) ")"; /* Show URLs in print */
+        }
+    
+        p {
+            margin: 0.5em 0; /* Space between paragraphs */
+        }
+    
+        /* Additional styles for lists, tables, etc. can be added here */
     }
 
     h6 {
