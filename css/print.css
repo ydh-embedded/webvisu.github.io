@@ -1,9 +1,15 @@
 @media print {
+    @page {
+        size: A4 landscape; /* Set the page size to A4 landscape */
+        margin: 1cm; /* Set margins for the print */
+    }
+
     body {
-        margin: 2cm;
-        font-size: 12pt; /* Consider increasing for readability */
-        color: #000000;
-        background-color: #ffffff;
+        font-family: Arial, sans-serif; /* Use a readable font */
+        font-size: 12pt; /* Base font size */
+        color: #000000; /* Text color */
+        background-color: #ffffff; /* Background color */
+        margin: 0; /* Remove default body margin */
     }
 
     .menu {
@@ -17,15 +23,27 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: #000000; /* Ensure all headings are black */
+        page-break-after: avoid; /* Avoid page break after headings */
     }
 
-    h6 {
-        page-break-after: avoid; /* Avoid page break after h6 */
+    h1 {
+        font-size: 18pt; /* Larger font size for main title */
+        margin-bottom: 0.5em; /* Space below the title */
+    }
+
+    h2 {
+        font-size: 16pt; /* Subheading size */
+        margin-bottom: 0.4em; /* Space below subheadings */
+    }
+
+    h3 {
+        font-size: 14pt; /* Smaller subheading size */
+        margin-bottom: 0.3em; /* Space below */
     }
 
     a {
         text-decoration: underline; /* Underline links */
-        color: #000000; /* Use a darker color for print */
+        color: #0000EE; /* Standard link color in print */
     }
 
     a[href]:after {
@@ -35,7 +53,38 @@
     p {
         orphans: 2; /* Control the number of orphans */
         widows: 2; /* Control the number of widows */
+        margin: 0.5em 0; /* Space between paragraphs */
     }
 
-    /* Additional styles for lists, tables, etc. can be added here */
+    ul, ol {
+        margin: 0.5em 0; /* Space around lists */
+        padding-left: 1.5em; /* Indent lists */
+    }
+
+    li {
+        margin-bottom: 0.2em; /* Space between list items */
+    }
+
+    table {
+        width: 100%; /* Full width for tables */
+        border-collapse: collapse; /* Collapse borders */
+        margin: 1em 0; /* Space around tables */
+    }
+
+    th, td {
+        border: 1px solid #000; /* Border for table cells */
+        padding: 0.5em; /* Padding inside cells */
+        text-align: left; /* Align text to the left */
+    }
+
+    th {
+        background-color: #f2f2f2; /* Light background for headers */
+    }
+
+    img {
+        max-width: 100%; /* Ensure images fit within the page */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Additional styles for other elements can be added here */
 }
