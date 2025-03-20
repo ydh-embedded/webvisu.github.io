@@ -1,7 +1,7 @@
 @media print {
     body {
         margin: 2cm;
-        font-size: 12pt;
+        font-size: 12pt; /* Consider increasing for readability */
         color: #000000;
         background-color: #ffffff;
     }
@@ -25,7 +25,7 @@
 
     a {
         text-decoration: underline; /* Underline links */
-        color: #0000EE; /* Standard link color in print */
+        color: #000000; /* Use a darker color for print */
     }
 
     a[href]:after {
@@ -36,13 +36,6 @@
         orphans: 2; /* Control the number of orphans */
         widows: 2; /* Control the number of widows */
     }
-}
 
-/* This part is not needed in print context */
-a[href]::after {
-    content: " <" attr(href) ">";
-    color: #888;
-    background-color: inherit;
-    font-style: italic;
-    size: 80%;
+    /* Additional styles for lists, tables, etc. can be added here */
 }
