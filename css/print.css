@@ -1,13 +1,13 @@
 @media print {
     body {
+        margin: 2cm;
         font-size: 12pt;
         color: #000000;
         background-color: #ffffff;
     }
 
     .menu {
-        display: none;
-        /* Hide the menu in print */
+        display: none; /* Hide the menu in print */
     }
 
     .main {
@@ -15,50 +15,34 @@
         padding: 0;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000; /* Ensure all headings are black */
+    }
+
     h6 {
-        color: #000000;
-        /* Ensure all headings are black */
+        page-break-after: avoid; /* Avoid page break after h6 */
     }
 
     a {
-        text-decoration: underline;
-        /* Underline links */
-        color: #0000EE;
-        /* Standard link color in print */
+        text-decoration: underline; /* Underline links */
+        color: #0000EE; /* Standard link color in print */
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
-        /* Show URLs in print */
+        content: " (" attr(href) ")"; /* Show URLs in print */
+    }
+
+    p {
+        orphans: 2; /* Control the number of orphans */
+        widows: 2; /* Control the number of widows */
     }
 }
 
+/* This part is not needed in print context */
 a[href]::after {
     content: " <" attr(href) ">";
     color: #888;
     background-color: inherit;
     font-style: italic;
     size: 80%;
-}
-
-
-p {
-    orphans: 2;
-    widows: 2;
-}
-
-@media print {
-    body {
-        margin: 2cm;
-    }
-
-    h6 {
-        page-break-after: avoid;
-    }
-
 }
