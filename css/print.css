@@ -1,0 +1,64 @@
+@media print {
+    body {
+        font-size: 12pt;
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    .menu {
+        display: none;
+        /* Hide the menu in print */
+    }
+
+    .main {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #000000;
+        /* Ensure all headings are black */
+    }
+
+    a {
+        text-decoration: underline;
+        /* Underline links */
+        color: #0000EE;
+        /* Standard link color in print */
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        /* Show URLs in print */
+    }
+}
+
+a[href]::after {
+    content: " <" attr(href) ">";
+    color: #888;
+    background-color: inherit;
+    font-style: italic;
+    size: 80%;
+}
+
+
+p {
+    orphans: 2;
+    widows: 2;
+}
+
+@media print {
+    body {
+        margin: 2cm;
+    }
+
+    h6 {
+        page-break-after: avoid;
+    }
+
+}
