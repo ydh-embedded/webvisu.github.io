@@ -23,7 +23,7 @@
 
     h1, h2, h3, h4, h5, h6 {
         color: #000000; /* Ensure all headings are black */
-        page-break-after: avoid; /* Avoid page break after headings */
+        
     }
 
     h1 {
@@ -39,6 +39,10 @@
     h3 {
         font-size: 14pt; /* Smaller subheading size */
         margin-bottom: 0.3em; /* Space below */
+    }
+
+    h6 {
+        page-break-after: avoid; /* Avoid page break after headings */
     }
 
     a {
